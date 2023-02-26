@@ -9,19 +9,30 @@
 /* Begin PBXBuildFile section */
 		5A7F8FEB29AB58970012B496 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F8FEA29AB58970012B496 /* AppDelegate.swift */; };
 		5A7F8FED29AB58970012B496 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F8FEC29AB58970012B496 /* SceneDelegate.swift */; };
-		5A7F8FEF29AB58970012B496 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F8FEE29AB58970012B496 /* ViewController.swift */; };
 		5A7F8FF429AB58980012B496 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A7F8FF329AB58980012B496 /* Assets.xcassets */; };
 		5A7F8FF729AB58980012B496 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A7F8FF529AB58980012B496 /* LaunchScreen.storyboard */; };
+		5A90258A29AB5E5F00D278EE /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 5A90258929AB5E5F00D278EE /* KeychainAccess */; };
+		5A90258F29AB705F00D278EE /* TraktAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A90258E29AB705F00D278EE /* TraktAPIError.swift */; };
+		5AD2D7EB2AAF239F00867432 /* TraktAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD2D7EA2AAF239F00867432 /* TraktAPI.swift */; };
+		5AD2D7EF2AAF243F00867432 /* TraktWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD2D7EE2AAF243F00867432 /* TraktWebView.swift */; };
+		5AD2D7F32AAF280400867432 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD2D7F22AAF280400867432 /* ContentView.swift */; };
+		5AD2D7F52AAF283100867432 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD2D7F42AAF283100867432 /* ViewModel.swift */; };
+		5AD2D7F92AAF2C6D00867432 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD2D7F82AAF2C6D00867432 /* Keys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5A7F8FE729AB58970012B496 /* echo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = echo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A7F8FEA29AB58970012B496 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A7F8FEC29AB58970012B496 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5A7F8FEE29AB58970012B496 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5A7F8FF329AB58980012B496 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A7F8FF629AB58980012B496 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A7F8FF829AB58980012B496 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A90258E29AB705F00D278EE /* TraktAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraktAPIError.swift; sourceTree = "<group>"; };
+		5AD2D7EA2AAF239F00867432 /* TraktAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktAPI.swift; sourceTree = "<group>"; };
+		5AD2D7EE2AAF243F00867432 /* TraktWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraktWebView.swift; sourceTree = "<group>"; };
+		5AD2D7F22AAF280400867432 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5AD2D7F42AAF283100867432 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		5AD2D7F82AAF2C6D00867432 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A90258A29AB5E5F00D278EE /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +68,12 @@
 			children = (
 				5A7F8FEA29AB58970012B496 /* AppDelegate.swift */,
 				5A7F8FEC29AB58970012B496 /* SceneDelegate.swift */,
-				5A7F8FEE29AB58970012B496 /* ViewController.swift */,
+				5AD2D7F22AAF280400867432 /* ContentView.swift */,
+				5AD2D7F42AAF283100867432 /* ViewModel.swift */,
+				5AD2D7F82AAF2C6D00867432 /* Keys.swift */,
+				5AD2D7EA2AAF239F00867432 /* TraktAPI.swift */,
+				5A90258E29AB705F00D278EE /* TraktAPIError.swift */,
+				5AD2D7EE2AAF243F00867432 /* TraktWebView.swift */,
 				5AABF84229AB59AB004F8B95 /* Resources */,
 			);
 			path = echo;
@@ -88,6 +105,9 @@
 			dependencies = (
 			);
 			name = echo;
+			packageProductDependencies = (
+				5A90258929AB5E5F00D278EE /* KeychainAccess */,
+			);
 			productName = echo;
 			productReference = 5A7F8FE729AB58970012B496 /* echo.app */;
 			productType = "com.apple.product-type.application";
@@ -116,6 +136,9 @@
 				Base,
 			);
 			mainGroup = 5A7F8FDE29AB58970012B496;
+			packageReferences = (
+				5A90258829AB5E5F00D278EE /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = 5A7F8FE829AB58970012B496 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -142,9 +165,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A7F8FEF29AB58970012B496 /* ViewController.swift in Sources */,
 				5A7F8FEB29AB58970012B496 /* AppDelegate.swift in Sources */,
+				5AD2D7F32AAF280400867432 /* ContentView.swift in Sources */,
+				5A90258F29AB705F00D278EE /* TraktAPIError.swift in Sources */,
+				5AD2D7EB2AAF239F00867432 /* TraktAPI.swift in Sources */,
 				5A7F8FED29AB58970012B496 /* SceneDelegate.swift in Sources */,
+				5AD2D7F52AAF283100867432 /* ViewModel.swift in Sources */,
+				5AD2D7F92AAF2C6D00867432 /* Keys.swift in Sources */,
+				5AD2D7EF2AAF243F00867432 /* TraktWebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +380,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5A90258829AB5E5F00D278EE /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5A90258929AB5E5F00D278EE /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A90258829AB5E5F00D278EE /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5A7F8FDF29AB58970012B496 /* Project object */;
 }
