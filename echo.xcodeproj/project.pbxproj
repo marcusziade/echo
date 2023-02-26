@@ -15,6 +15,7 @@
 		5A90258729AB5D0000D278EE /* TraktManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A90258629AB5D0000D278EE /* TraktManager.swift */; };
 		5A90258A29AB5E5F00D278EE /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 5A90258929AB5E5F00D278EE /* KeychainAccess */; };
 		5A90258D29AB5F0D00D278EE /* OAuthSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5A90258C29AB5F0D00D278EE /* OAuthSwift */; };
+		5A90258F29AB705F00D278EE /* TraktManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A90258E29AB705F00D278EE /* TraktManagerError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5A7F8FF629AB58980012B496 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A7F8FF829AB58980012B496 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A90258629AB5D0000D278EE /* TraktManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraktManager.swift; sourceTree = "<group>"; };
+		5A90258E29AB705F00D278EE /* TraktManagerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraktManagerError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				5A7F8FEA29AB58970012B496 /* AppDelegate.swift */,
 				5A7F8FEC29AB58970012B496 /* SceneDelegate.swift */,
 				5A90258629AB5D0000D278EE /* TraktManager.swift */,
+				5A90258E29AB705F00D278EE /* TraktManagerError.swift */,
 				5A7F8FEE29AB58970012B496 /* ViewController.swift */,
 				5AABF84229AB59AB004F8B95 /* Resources */,
 			);
@@ -160,6 +163,7 @@
 				5A7F8FEF29AB58970012B496 /* ViewController.swift in Sources */,
 				5A7F8FEB29AB58970012B496 /* AppDelegate.swift in Sources */,
 				5A90258729AB5D0000D278EE /* TraktManager.swift in Sources */,
+				5A90258F29AB705F00D278EE /* TraktManagerError.swift in Sources */,
 				5A7F8FED29AB58970012B496 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
