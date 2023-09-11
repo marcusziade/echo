@@ -15,6 +15,10 @@ final class TraktAPI {
         let title: String
     }
     
+    var isLoggedIn: Bool {
+        accessToken != nil
+    }
+    
     func authorize(authCode code: String) async throws -> Bool {
         guard
             URL(string: "https://trakt.tv/oauth/authorize?response_type=code&client_id=\(Keys.clientId)&redirect_uri=\(Keys.redirectUri)") != nil

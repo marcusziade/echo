@@ -12,34 +12,16 @@ struct WebView: UIViewRepresentable {
         func webView(
             _ webView: WKWebView,
             decidePolicyFor navigationAction: WKNavigationAction,
-            decisionHandler: @escaping (
-                WKNavigationActionPolicy
-            ) -> Void
+            decisionHandler: @escaping (WKNavigationActionPolicy) -> Void
         ) {
-            debugPrint("1", navigationAction.request.url?.absoluteString ?? "")
-            
-            if let url = navigationAction.request.url, URLComponents(
-                url: url,
-                resolvingAgainstBaseURL: false
-            )?.queryItems?.contains(where: {
-                $0.name == "code"
-            }) == true {
-                
-                debugPrint("2", url.absoluteString)
-                
-                if let code = URLComponents(
-                    url: url,
-                    resolvingAgainstBaseURL: false
-                )?.queryItems?.first(where: {
-                    $0.name == "code"
-                })?.value {
-                    parent.didReceiveCode(code)
-                }
-                
+            if let url = navigationAction.request.url,
+               let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
+               let codeItem = components.queryItems?.first(where: { $0.name == "code" }),
+               let code = codeItem.value {
+                parent.didReceiveCode(code)
                 decisionHandler(.cancel)
                 return
             }
-            
             decisionHandler(.allow)
         }
     }
