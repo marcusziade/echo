@@ -10,6 +10,7 @@
 		5A63B6CF2AAF45670073A9D7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A63B6CE2AAF45670073A9D7 /* LoginView.swift */; };
 		5A63B6D12AAF471E0073A9D7 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A63B6D02AAF471E0073A9D7 /* AuthenticationManager.swift */; };
 		5A63B6D32AAF4EAB0073A9D7 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A63B6D22AAF4EAB0073A9D7 /* AuthenticationView.swift */; };
+		5A63B6DF2AAFAC410073A9D7 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A63B6DE2AAFAC410073A9D7 /* Keys.swift */; };
 		5A7F8FEB29AB58970012B496 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F8FEA29AB58970012B496 /* AppDelegate.swift */; };
 		5A7F8FED29AB58970012B496 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F8FEC29AB58970012B496 /* SceneDelegate.swift */; };
 		5A7F8FF429AB58980012B496 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A7F8FF329AB58980012B496 /* Assets.xcassets */; };
@@ -18,13 +19,13 @@
 		5A90258F29AB705F00D278EE /* TraktAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A90258E29AB705F00D278EE /* TraktAPIError.swift */; };
 		5AD2D7EB2AAF239F00867432 /* TraktAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD2D7EA2AAF239F00867432 /* TraktAPI.swift */; };
 		5AD2D7EF2AAF243F00867432 /* TraktWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD2D7EE2AAF243F00867432 /* TraktWebView.swift */; };
-		5AD2D7F92AAF2C6D00867432 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD2D7F82AAF2C6D00867432 /* Keys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5A63B6CE2AAF45670073A9D7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		5A63B6D02AAF471E0073A9D7 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		5A63B6D22AAF4EAB0073A9D7 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		5A63B6DE2AAFAC410073A9D7 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		5A7F8FE729AB58970012B496 /* echo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = echo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A7F8FEA29AB58970012B496 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A7F8FEC29AB58970012B496 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,7 +35,6 @@
 		5A90258E29AB705F00D278EE /* TraktAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraktAPIError.swift; sourceTree = "<group>"; };
 		5AD2D7EA2AAF239F00867432 /* TraktAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktAPI.swift; sourceTree = "<group>"; };
 		5AD2D7EE2AAF243F00867432 /* TraktWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraktWebView.swift; sourceTree = "<group>"; };
-		5AD2D7F82AAF2C6D00867432 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +73,6 @@
 				5A63B6D02AAF471E0073A9D7 /* AuthenticationManager.swift */,
 				5A63B6CE2AAF45670073A9D7 /* LoginView.swift */,
 				5A63B6D22AAF4EAB0073A9D7 /* AuthenticationView.swift */,
-				5AD2D7F82AAF2C6D00867432 /* Keys.swift */,
 				5AD2D7EA2AAF239F00867432 /* TraktAPI.swift */,
 				5A90258E29AB705F00D278EE /* TraktAPIError.swift */,
 				5AD2D7EE2AAF243F00867432 /* TraktWebView.swift */,
@@ -88,6 +87,7 @@
 				5A7F8FF329AB58980012B496 /* Assets.xcassets */,
 				5A7F8FF529AB58980012B496 /* LaunchScreen.storyboard */,
 				5A7F8FF829AB58980012B496 /* Info.plist */,
+				5A63B6DE2AAFAC410073A9D7 /* Keys.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -175,7 +175,7 @@
 				5AD2D7EB2AAF239F00867432 /* TraktAPI.swift in Sources */,
 				5A63B6D32AAF4EAB0073A9D7 /* AuthenticationView.swift in Sources */,
 				5A7F8FED29AB58970012B496 /* SceneDelegate.swift in Sources */,
-				5AD2D7F92AAF2C6D00867432 /* Keys.swift in Sources */,
+				5A63B6DF2AAFAC410073A9D7 /* Keys.swift in Sources */,
 				5AD2D7EF2AAF243F00867432 /* TraktWebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

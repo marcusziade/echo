@@ -60,7 +60,7 @@ struct AuthenticationView: View {
                     WebView(didReceiveCode: { code in
                         model.authCode = code
                         model.showSignIn = false
-                    }, request: URLRequest(url: URL(string: "https://trakt.tv/oauth/authorize?response_type=code&client_id=\(Keys.clientId)&redirect_uri=\(Keys.redirectUri)")!))
+                    }, request: URLRequest(url: URL(string: "https://trakt.tv/oauth/authorize?response_type=code&client_id=\(Keys.clientID)&redirect_uri=\(Keys.redirectURI)")!))
                     .navigationBarItems(leading: Button {
                         model.showSignIn = false
                     } label: {

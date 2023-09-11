@@ -21,7 +21,7 @@ final class TraktAPI {
     
     func authorize(authCode code: String) async throws -> Bool {
         guard
-            URL(string: "https://trakt.tv/oauth/authorize?response_type=code&client_id=\(Keys.clientId)&redirect_uri=\(Keys.redirectUri)") != nil
+            URL(string: "https://trakt.tv/oauth/authorize?response_type=code&client_id=\(Keys.clientID)&redirect_uri=\(Keys.redirectURI)") != nil
         else {
             throw URLError(.badURL)
         }
@@ -39,9 +39,9 @@ final class TraktAPI {
         
         let parameters = [
             "code": authorizationCode,
-            "client_id": Keys.clientId,
+            "client_id": Keys.clientID,
             "client_secret": Keys.clientSecret,
-            "redirect_uri": Keys.redirectUri,
+            "redirect_uri": Keys.redirectURI,
             "grant_type": "authorization_code",
         ]
         
@@ -77,7 +77,7 @@ final class TraktAPI {
         var request = URLRequest(url: url)
         request.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue(Keys.clientId, forHTTPHeaderField: "trakt-api-key")
+        request.addValue(Keys.clientID, forHTTPHeaderField: "trakt-api-key")
         
         let (data, response) = try await URLSession.shared.data(for: request)
         guard
