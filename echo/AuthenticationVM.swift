@@ -5,32 +5,31 @@ import Observation
 @Observable final class AuthenticationVM {
     var animationAmount: CGFloat = 1
     var showSignIn: Bool = false
-    var authCode: String?
     var isError: Bool = false
     var errorMessage: String?
     var isLoggedIn = false
     
     init() {
-        isLoggedIn = api.isLoggedIn
+        Task { await authorize() }
     }
+    
+    private(set) var api = TraktAPI()
     
     func authorize() async {
-        do {
-            let success = try await api.authorize(authCode: authCode ?? "")
-            isError = !success
-            isLoggedIn = success
-        } catch {
-            isError = true
-            errorMessage = error.localizedDescription
+        api.authorize { [unowned self] result in
+            switch result {
+            case .success:
+                isLoggedIn = api.isLoggedIn
+                isError = false
+            case .failure(let error):
+                isError = true
+                errorMessage = error.localizedDescription
+            }
         }
     }
-    
+
     func deauthorize() {
         api.deauthorize()
         isLoggedIn = false
     }
-
-    // MARK: Private
-    
-    private let api = TraktAPI()
 }

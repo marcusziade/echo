@@ -78,7 +78,7 @@ struct LaunchView: View {
     
     private var authWebView: some View {
         WebView(didReceiveCode: { code in
-            model.authCode = code
+            model.api.authorizationCode = code
             model.showSignIn = false
             model.isLoggedIn = true
         }, request: URLRequest(url: URL(string: "https://trakt.tv/oauth/authorize?response_type=code&client_id=\(Keys.clientID)&redirect_uri=\(Keys.redirectURI)")!))
