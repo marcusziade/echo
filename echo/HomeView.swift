@@ -10,10 +10,14 @@ struct HomeView: View {
     }
     
     var body: some View {
-        Button {
-            authModel.deauthorize()
-        } label: {
-            Text("Sign Out")
+        if authModel.isLoggedIn {
+            Button {
+                authModel.deauthorize()
+            } label: {
+                Text("Sign Out")
+            }
+        } else {
+            LaunchView(model: $authModel)
         }
     }
 }

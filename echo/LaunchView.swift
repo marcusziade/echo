@@ -56,7 +56,7 @@ struct LaunchView: View {
                 await model.authorize()
             }
         } label: {
-            Text(model.isLoggedIn ? "Sign Out" : "Authenticate")
+            Text("Authenticate")
                 .font(.headline)
                 .fontWeight(.semibold)
                 .foregroundColor(.white)
@@ -80,6 +80,7 @@ struct LaunchView: View {
         WebView(didReceiveCode: { code in
             model.authCode = code
             model.showSignIn = false
+            model.isLoggedIn = true
         }, request: URLRequest(url: URL(string: "https://trakt.tv/oauth/authorize?response_type=code&client_id=\(Keys.clientID)&redirect_uri=\(Keys.redirectURI)")!))
         .navigationBarItems(leading: Button {
             model.showSignIn = false

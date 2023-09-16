@@ -27,6 +27,7 @@ import Observation
     
     func deauthorize() {
         api.deauthorize()
+        isLoggedIn = false
     }
 
     // MARK: Private
