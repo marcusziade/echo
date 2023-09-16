@@ -2,23 +2,31 @@ import Foundation
 import Combine
 import Observation
 
-@Observable final class AuthenticationManager {
+@Observable final class AuthenticationVM {
     var animationAmount: CGFloat = 1
     var showSignIn: Bool = false
     var authCode: String?
     var isError: Bool = false
     var errorMessage: String?
-    var isLoggedIn: Bool = false
+    var isLoggedIn = false
+    
+    init() {
+        isLoggedIn = api.isLoggedIn
+    }
     
     func authorize() async {
         do {
             let success = try await api.authorize(authCode: authCode ?? "")
             isError = !success
-            isLoggedIn = api.isLoggedIn
+            isLoggedIn = success
         } catch {
             isError = true
             errorMessage = error.localizedDescription
         }
+    }
+    
+    func deauthorize() {
+        api.deauthorize()
     }
 
     // MARK: Private

@@ -1,6 +1,8 @@
 import Foundation
 
 enum TraktAPIError: Error {
+    case badResponse
+    case badURL
     case tokenNotFound
     case refreshTokenNotFound
     case accessTokenNotSaved
@@ -16,6 +18,10 @@ enum TraktAPIError: Error {
             return "Error saving access token and refresh token to keychain:"
         case .encoding:
             return "Error encoding parameters:"
+        case .badResponse:
+            return "Bad response from server"
+        case .badURL:
+            return "Bad URL"
         }
     }
 }
